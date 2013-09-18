@@ -1,0 +1,3 @@
+<launch>
+  <node name="coax_ui" pkg="coax_ui" type="CoaxGUI" clear_params="true" output="screen"  args="_image_transport:=compressed" />
+</launch>

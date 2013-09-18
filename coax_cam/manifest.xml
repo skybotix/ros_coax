@@ -1,0 +1,18 @@
+<package>
+  <description brief="coax_cam">
+
+     coax_cam
+
+  </description>
+  <author>Thomas Schneider, skybotix ag</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://skybotix.com</url>
+  <depend package="image_transport"/>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+</package>
+
+

@@ -1,0 +1,18 @@
+
+Ad-hoc mode only:
+ifconfig wlan0
+iwconfig wlan0 mode ad-hoc
+iwconfig wlan0 essid coaxstix
+ifconfig wlan0 192.168.0.1
+
+Setting up serial port:
+stty -F /dev/ttyS2 ispeed 115200 ospeed 115200 raw
+cat /dev/ttyS2
+
+Setting OTG port to host mode (as root):
+echo "host" > /sys/devices/platform/musb-omap2430/musb-hdrc/mode
+
+Setup serial port to coax-board:
+devmem2 0x480020e8 w 0x1020002
+
+

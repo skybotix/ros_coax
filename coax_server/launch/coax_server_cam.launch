@@ -1,0 +1,6 @@
+<launch>
+  <node name="coax_server" pkg="coax_server" type="coax_server" clear_params="true" output="screen" args="/dev/ttyO0" />
+
+ <node pkg="coax_cam" type="coax_cam" name="coax_cam" output="screen" args="_image_transport:=compressed" />
+
+</launch>

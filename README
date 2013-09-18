@@ -1,0 +1,34 @@
+==================
+= CoaX ROS Stack =
+==================
+
+Coax API
+--------
+coax_communication	-	Coax API as ROS library (ROS-Coax Interface)
+coax_msgs		-	ROS messages
+
+Example Nodes (untested / should only be used as examples for own nodes)
+------------------------------------------------------------------------
+coax_server		-	publishes coax states to ROS
+coax_ptam_interface	-	conversion ros image topic to opencv mat
+coax_teleop		-	teleoperation
+coax_ui			-	Coax GUI
+coax_cam		-	webcam image publisher
+
+=========================
+= Start ROS coax server =
+=========================
+roslaunch coax_server coax_server.launch
+
+or (to also stream the camera image)
+
+roslaunch coax_server coax_server_cam.launch
+
+view camera on hostpc:
+rosrun image_view image_view image:=/cv_capture image_transport:=compressed
+
+=====================
+= CoaX simpleshell  =
+=====================
+roscd coax_communication
+./bin/simplehelishell /dev/ttyO0
